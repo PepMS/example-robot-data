@@ -437,11 +437,23 @@ def loadIris():
     return IrisLoader().robot
 
 
+class HexacopterUAMLoader(RobotLoader):
+    path = "hexacopter_uam_description"
+    urdf_filename = "hexacopter_uam.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+def loadHexacopterUAM():
+    warnings.warn(_depr_msg('loadHexacopterUAM()', 'hector'), DeprecationWarning, 2)
+    return HexacopterUAMLoader().robot
+
 ROBOTS = {
     'anymal': ANYmalLoader,
     'anymal_kinova': ANYmalKinovaLoader,
     'double_pendulum': DoublePendulumLoader,
     'hector': HectorLoader,
+    'hexacopter_uam': HexacopterUAMLoader,
     'hyq': HyQLoader,
     'icub': ICubLoader,
     'icub_reduced': ICubReducedLoader,
