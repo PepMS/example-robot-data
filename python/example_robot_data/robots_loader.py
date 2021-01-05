@@ -445,13 +445,41 @@ class HexacopterUAMLoader(RobotLoader):
 
 
 def loadHexacopterUAM():
-    warnings.warn(_depr_msg('loadHexacopterUAM()', 'hector'), DeprecationWarning, 2)
+    warnings.warn(_depr_msg('loadHexacopterUAM()', 'hexacopter_uam'), DeprecationWarning, 2)
     return HexacopterUAMLoader().robot
+
+
+class FlyingArmLoader(RobotLoader):
+    path = "flying_arm_description"
+    urdf_filename = "flying_arm.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = False
+
+
+def loadFlyingArm():
+    warnings.warn(_depr_msg('loadFlyingArm()', 'flyingarm'), DeprecationWarning, 2)
+    return HexacopterUAMLoader().robot
+
+
+class TiltHexLoader(RobotLoader):
+    path = "tilt_hex_description"
+    urdf_filename = "tilt_hex.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class TiltHexFlyingArm5(RobotLoader):
+    path = "tilt_hex_description"
+    urdf_filename = "tilt_hex_flying_arm_5.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
 
 ROBOTS = {
     'anymal': ANYmalLoader,
     'anymal_kinova': ANYmalKinovaLoader,
     'double_pendulum': DoublePendulumLoader,
+    'flying_arm': FlyingArmLoader,
     'hector': HectorLoader,
     'hexacopter_uam': HexacopterUAMLoader,
     'hyq': HyQLoader,
@@ -471,6 +499,8 @@ ROBOTS = {
     'talos_full_box': TalosFullBoxLoader,
     'tiago': TiagoLoader,
     'tiago_no_hand': TiagoNoHandLoader,
+    'tilt_hex': TiltHexLoader,
+    'tilt_hex_flying_arm_5': TiltHexFlyingArm5,
     'ur3': UR5Loader,
     'ur3_gripper': UR3GripperLoader,
     'ur3_limited': UR3LimitedLoader,
