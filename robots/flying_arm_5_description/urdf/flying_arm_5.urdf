@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="urdf">
+<robot name="flying_arm_5">
   <link name="arm_baselink">
     <inertial>
       <origin xyz="5.4471E-05 0.00055544 0.0045971" rpy="0 0 0" />
@@ -9,7 +9,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_baselink.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
       </geometry>
       <material name="">
         <color rgba="0.75294 0.75294 0.75294 1" />
@@ -18,7 +18,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_baselink.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
       </geometry>
     </collision>
   </link>
@@ -31,7 +31,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_link1.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link1.dae" />
       </geometry>
       <material name="">
         <color rgba="0.75294 0.75294 0.75294 1" />
@@ -40,7 +40,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_link1.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link1.dae" />
       </geometry>
     </collision>
   </link>
@@ -60,7 +60,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_link2.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link2.dae" />
       </geometry>
       <material name="">
         <color rgba="0.75294 0.75294 0.75294 1" />
@@ -69,7 +69,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_link2.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link2.dae" />
       </geometry>
     </collision>
   </link>
@@ -89,7 +89,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_link3.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link3.dae" />
       </geometry>
       <material name="">
         <color rgba="0.75294 0.75294 0.75294 1" />
@@ -98,7 +98,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_link3.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link3.dae" />
       </geometry>
     </collision>
   </link>
@@ -118,7 +118,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_link4.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link4.dae" />
       </geometry>
       <material name="">
         <color rgba="0.75294 0.75294 0.75294 1" />
@@ -127,7 +127,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_link4.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_link4.dae" />
       </geometry>
     </collision>
   </link>
@@ -147,7 +147,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_ee.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_ee.dae" />
       </geometry>
       <material name="">
         <color rgba="0.75294 0.75294 0.75294 1" />
@@ -156,7 +156,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_description/meshes/arm_ee.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_ee.dae" />
       </geometry>
     </collision>
   </link>

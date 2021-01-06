@@ -449,16 +449,23 @@ def loadHexacopterUAM():
     return HexacopterUAMLoader().robot
 
 
-class FlyingArmLoader(RobotLoader):
-    path = "flying_arm_description"
-    urdf_filename = "flying_arm.urdf"
+class FlyingArm5Loader(RobotLoader):
+    path = "flying_arm_5_description"
+    urdf_filename = "flying_arm_5.urdf"
     urdf_subpath = "urdf"
     free_flyer = False
 
 
 def loadFlyingArm():
     warnings.warn(_depr_msg('loadFlyingArm()', 'flyingarm'), DeprecationWarning, 2)
-    return HexacopterUAMLoader().robot
+    return FlyingArm5Loader().robot
+
+
+class FlyingArm3Loader(RobotLoader):
+    path = "flying_arm_3_description"
+    urdf_filename = "flying_arm_3.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = False
 
 
 class TiltHexLoader(RobotLoader):
@@ -479,7 +486,8 @@ ROBOTS = {
     'anymal': ANYmalLoader,
     'anymal_kinova': ANYmalKinovaLoader,
     'double_pendulum': DoublePendulumLoader,
-    'flying_arm': FlyingArmLoader,
+    'flying_arm_5': FlyingArm5Loader,
+    'flying_arm_3': FlyingArm3Loader,
     'hector': HectorLoader,
     'hexacopter_uam': HexacopterUAMLoader,
     'hyq': HyQLoader,
