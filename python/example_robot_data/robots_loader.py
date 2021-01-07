@@ -437,16 +437,11 @@ def loadIris():
     return IrisLoader().robot
 
 
-class HexacopterUAMLoader(RobotLoader):
-    path = "hexacopter_uam_description"
-    urdf_filename = "hexacopter_uam.urdf"
+class Hexarotor680FlyingArm2Loader(RobotLoader):
+    path = "hexarotor_680_description"
+    urdf_filename = "hexarotor_680_flying_arm_2.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
-
-
-def loadHexacopterUAM():
-    warnings.warn(_depr_msg('loadHexacopterUAM()', 'hexacopter_uam'), DeprecationWarning, 2)
-    return HexacopterUAMLoader().robot
 
 
 class FlyingArm5Loader(RobotLoader):
@@ -454,11 +449,6 @@ class FlyingArm5Loader(RobotLoader):
     urdf_filename = "flying_arm_5.urdf"
     urdf_subpath = "urdf"
     free_flyer = False
-
-
-def loadFlyingArm():
-    warnings.warn(_depr_msg('loadFlyingArm()', 'flyingarm'), DeprecationWarning, 2)
-    return FlyingArm5Loader().robot
 
 
 class FlyingArm3Loader(RobotLoader):
@@ -503,9 +493,9 @@ ROBOTS = {
     'flying_arm_5': FlyingArm5Loader,
     'flying_arm_3': FlyingArm3Loader,
     'hector': HectorLoader,
-    'hexacopter_uam': HexacopterUAMLoader,
     'hexarotor_370': Hexarotor370Loader,
     'hexarotor_370_flying_arm_3': Hexarotor370FlyingArm3Loader,
+    'hexarotor_680_flying_arm_2': Hexarotor680FlyingArm2Loader,
     'hyq': HyQLoader,
     'icub': ICubLoader,
     'icub_reduced': ICubReducedLoader,

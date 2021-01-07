@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
-     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
-     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot name="aerial_manipulator_urdf">
+<robot name="hexarotor_680_description">
   <link name="base_link">
     <inertial>
       <origin xyz="-0.10926 -8.7904E-10 -0.047707" rpy="0 0 0" />
@@ -12,7 +9,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/hexacopter_uam_description/meshes/base_link.dae" />
+        <mesh filename="package://example-robot-data/robots/hexarotor_680_description/meshes/base_link.dae" />
       </geometry>
       <material name="">
         <color rgba="1 0.50196 0.0 1" />
@@ -21,7 +18,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/hexacopter_uam_description/meshes/base_link.dae" />
+        <mesh filename="package://example-robot-data/robots/hexarotor_680_description/meshes/base_link.dae" />
       </geometry>
     </collision>
   </link>
@@ -34,7 +31,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/hexacopter_uam_description/meshes/arm_base_link.dae" />
+        <mesh filename="package://example-robot-data/robots/hexarotor_680_description/meshes/arm_base_link.dae" />
       </geometry>
       <material name="">
         <color rgba="0.2 0.8 0.2 1" />
@@ -43,7 +40,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/hexacopter_uam_description/meshes/arm_base_link.dae" />
+        <mesh filename="package://example-robot-data/robots/hexarotor_680_description/meshes/arm_base_link.dae" />
       </geometry>
     </collision>
   </link>
@@ -62,7 +59,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/hexacopter_uam_description/meshes/arm_link1.dae" />
+        <mesh filename="package://example-robot-data/robots/hexarotor_680_description/meshes/arm_link1.dae" />
       </geometry>
       <material name="">
         <color rgba="1.0 0.2 0.0 1" />
@@ -71,7 +68,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/hexacopter_uam_description/meshes/arm_link1.dae" />
+        <mesh filename="package://example-robot-data/robots/hexarotor_680_description/meshes/arm_link1.dae" />
       </geometry>
     </collision>
   </link>
@@ -91,7 +88,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/hexacopter_uam_description/meshes/arm_link2.dae" />
+        <mesh filename="package://example-robot-data/robots/hexarotor_680_description/meshes/arm_link2.dae" />
       </geometry>
       <material name="">
         <color rgba="1.0 0.8 0.0 1" />
@@ -100,7 +97,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/hexacopter_uam_description/meshes/arm_link2.dae" />
+        <mesh filename="package://example-robot-data/robots/hexarotor_680_description/meshes/arm_link2.dae" />
       </geometry>
     </collision>
   </link>

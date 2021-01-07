@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="hexarotor_370">
+<robot name="hexarotor_370_flying_arm_3">
   <link name="base_link">
     <inertial>
       <origin xyz="5.8038E-05 -0.021132 -0.00022489" rpy="0 0 0" />
