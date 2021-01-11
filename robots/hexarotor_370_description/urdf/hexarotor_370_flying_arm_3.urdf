@@ -2,9 +2,9 @@
 <robot name="hexarotor_370_flying_arm_3">
   <link name="base_link">
     <inertial>
-      <origin xyz="5.8038E-05 -0.021132 -0.00022489" rpy="0 0 0" />
+      <origin xyz="0.00022489 -5.8038E-05 -0.021132" rpy="0 0 0" />
       <mass value="1.9828" />
-      <inertia ixx="0.0022908" ixy="1.9836E-06" ixz="6.3282E-06" iyy="0.0031604" iyz="-8.4594E-06" izz="0.0013223" />
+      <inertia ixx="0.0013223" ixy="6.3282E-06" ixz="8.4594E-06" iyy="0.0022908" iyz="-1.9836E-06" izz="0.0031604" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -77,7 +77,7 @@
     <parent link="arm_baselink" />
     <child link="arm_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="0" upper="0" effort="0" velocity="0" />
+    <limit lower="-1.9" upper="1.9" effort="0" velocity="3" />
   </joint>
   <link name="arm_link2">
     <inertial>
@@ -106,9 +106,9 @@
     <parent link="arm_link1" />
     <child link="arm_link2" />
     <axis xyz="0 0 1" />
-    <limit lower="0" upper="0" effort="0" velocity="0" />
+    <limit lower="-1.9" upper="1.9" effort="0" velocity="3" />
   </joint>
-  <link name="arm_ee">
+  <link name="arm_link3">
     <inertial>
       <origin xyz="0.017465 3.6051E-08 -0.011925" rpy="0 0 0" />
       <mass value="0.030904" />
@@ -130,11 +130,26 @@
       </geometry>
     </collision>
   </link>
-  <joint name="arm_link2_ee" type="revolute">
+  <joint name="arm_link2_arm_link3" type="revolute">
     <origin xyz="0.075 0 0" rpy="0 0 0" />
     <parent link="arm_link2" />
-    <child link="arm_ee" />
+    <child link="arm_link3" />
     <axis xyz="0 0 1" />
+    <limit lower="-1.9" upper="1.9" effort="0" velocity="3" />
+  </joint>
+  <link name="arm_ee">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <mass value="0." />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
+  <joint name="arm_link3_ee" type="fixed">
+    <origin xyz="0.05 0 -0.015" rpy="0 0 0" />
+    <parent link="arm_link3" />
+    <child link="arm_ee" />
+    <axis xyz="0 0 0" />
     <limit lower="0" upper="0" effort="0" velocity="0" />
   </joint>
+
 </robot>

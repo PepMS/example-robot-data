@@ -2,9 +2,9 @@
 <robot name="hexarotor_370">
   <link name="base_link">
     <inertial>
-      <origin xyz="5.8038E-05 -0.021132 -0.00022489" rpy="0 0 0" />
+      <origin xyz="0.00022489 -5.8038E-05 -0.021132" rpy="0 0 0" />
       <mass value="1.9828" />
-      <inertia ixx="0.0022908" ixy="1.9836E-06" ixz="6.3282E-06" iyy="0.0031604" iyz="-8.4594E-06" izz="0.0013223" />
+      <inertia ixx="0.0013223" ixy="6.3282E-06" ixz="8.4594E-06" iyy="0.0022908" iyz="-1.9836E-06" izz="0.0031604" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
