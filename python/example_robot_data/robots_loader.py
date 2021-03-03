@@ -472,16 +472,16 @@ class TiltHexFlyingArm5(RobotLoader):
     free_flyer = True
 
 
-class Hexarotor370Loader(RobotLoader):
-    path = "hexarotor_370_description"
-    urdf_filename = "hexarotor_370.urdf"
+class Hexacopter370Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
 
 
-class Hexarotor370FlyingArm3Loader(RobotLoader):
-    path = "hexarotor_370_description"
-    urdf_filename = "hexarotor_370_flying_arm_3.urdf"
+class Hexacopter370FlyingArm3Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370_flying_arm_3.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
 
@@ -493,8 +493,8 @@ ROBOTS = {
     'flying_arm_5': FlyingArm5Loader,
     'flying_arm_3': FlyingArm3Loader,
     'hector': HectorLoader,
-    'hexarotor_370': Hexarotor370Loader,
-    'hexarotor_370_flying_arm_3': Hexarotor370FlyingArm3Loader,
+    'hexacopter370': Hexacopter370Loader,
+    'hexacopter370_flying_arm_3': Hexacopter370FlyingArm3Loader,
     'hexarotor_680_flying_arm_2': Hexarotor680FlyingArm2Loader,
     'hyq': HyQLoader,
     'icub': ICubLoader,
