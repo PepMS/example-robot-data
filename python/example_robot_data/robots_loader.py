@@ -428,7 +428,7 @@ def loadRomeo():
 
 class IrisLoader(RobotLoader):
     path = "iris_description"
-    urdf_filename = "iris_simple.urdf"
+    urdf_filename = "iris.urdf"
     free_flyer = True
 
 
