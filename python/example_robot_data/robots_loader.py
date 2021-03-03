@@ -486,6 +486,13 @@ class Hexacopter370FlyingArm3Loader(RobotLoader):
     free_flyer = True
 
 
+class Hexacopter370FlyingArm5Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370_flying_arm_5.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
 ROBOTS = {
     'anymal': ANYmalLoader,
     'anymal_kinova': ANYmalKinovaLoader,
@@ -495,6 +502,7 @@ ROBOTS = {
     'hector': HectorLoader,
     'hexacopter370': Hexacopter370Loader,
     'hexacopter370_flying_arm_3': Hexacopter370FlyingArm3Loader,
+    'hexacopter370_flying_arm_5': Hexacopter370FlyingArm5Loader,
     'hexarotor_680_flying_arm_2': Hexarotor680FlyingArm2Loader,
     'hyq': HyQLoader,
     'icub': ICubLoader,
