@@ -428,7 +428,7 @@ def loadRomeo():
 
 class IrisLoader(RobotLoader):
     path = "iris_description"
-    urdf_filename = "iris_simple.urdf"
+    urdf_filename = "iris.urdf"
     free_flyer = True
 
 
@@ -437,11 +437,73 @@ def loadIris():
     return IrisLoader().robot
 
 
+class Hexarotor680FlyingArm2Loader(RobotLoader):
+    path = "hexarotor_680_description"
+    urdf_filename = "hexarotor_680_flying_arm_2.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class FlyingArm5Loader(RobotLoader):
+    path = "flying_arm_5_description"
+    urdf_filename = "flying_arm_5.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = False
+
+
+class FlyingArm3Loader(RobotLoader):
+    path = "flying_arm_3_description"
+    urdf_filename = "flying_arm_3.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = False
+
+
+class TiltHexLoader(RobotLoader):
+    path = "tilt_hex_description"
+    urdf_filename = "tilt_hex.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class TiltHexFlyingArm5(RobotLoader):
+    path = "tilt_hex_description"
+    urdf_filename = "tilt_hex_flying_arm_5.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class Hexacopter370Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class Hexacopter370FlyingArm3Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370_flying_arm_3.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
+class Hexacopter370FlyingArm5Loader(RobotLoader):
+    path = "hexacopter370_description"
+    urdf_filename = "hexacopter370_flying_arm_5.urdf"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
 ROBOTS = {
     'anymal': ANYmalLoader,
     'anymal_kinova': ANYmalKinovaLoader,
     'double_pendulum': DoublePendulumLoader,
+    'flying_arm_5': FlyingArm5Loader,
+    'flying_arm_3': FlyingArm3Loader,
     'hector': HectorLoader,
+    'hexacopter370': Hexacopter370Loader,
+    'hexacopter370_flying_arm_3': Hexacopter370FlyingArm3Loader,
+    'hexacopter370_flying_arm_5': Hexacopter370FlyingArm5Loader,
+    'hexarotor_680_flying_arm_2': Hexarotor680FlyingArm2Loader,
     'hyq': HyQLoader,
     'icub': ICubLoader,
     'icub_reduced': ICubReducedLoader,
@@ -459,6 +521,8 @@ ROBOTS = {
     'talos_full_box': TalosFullBoxLoader,
     'tiago': TiagoLoader,
     'tiago_no_hand': TiagoNoHandLoader,
+    'tilt_hex': TiltHexLoader,
+    'tilt_hex_flying_arm_5': TiltHexFlyingArm5,
     'ur3': UR5Loader,
     'ur3_gripper': UR3GripperLoader,
     'ur3_limited': UR3LimitedLoader,
