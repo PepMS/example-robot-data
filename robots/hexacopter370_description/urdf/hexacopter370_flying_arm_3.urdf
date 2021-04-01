@@ -277,4 +277,19 @@
     <dynamics damping="0.1" friction="0.1"/>
   </joint>
 
+  <link name="flying_arm_3__gripper">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
+
+  <joint name="flying_arm_3__j_link_3_gripper" type="fixed">
+    <origin rpy="0 0 0" xyz="0.05 0 -0.01"/>
+    <parent link="flying_arm_3__link_3"/>
+    <child link="flying_arm_3__gripper"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
 </robot>
