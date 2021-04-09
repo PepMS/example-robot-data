@@ -21,14 +21,14 @@
     </visual>
   </link>
 
-  <joint name="iris__rotor_0_joint" type="fixed">
+  <!-- <joint name="iris__rotor_0_joint" type="fixed">
     <parent link="iris__base_link" />
     <child link="iris__rotor_0" />
     <origin rpy="0  0  0" xyz="0.13  -0.22   0.023" />
-  </joint>
+  </joint> -->
 
 
-  <link name="iris__rotor_0">
+  <!-- <link name="iris__rotor_0">
     <inertial>
       <mass value="0.005" />
       <origin rpy="0  0  0" xyz="0  0  0" />
@@ -125,6 +125,6 @@
         <mesh filename="package://example-robot-data/robots/iris_description/meshes/iris_prop_cw.dae" scale="1 1 1" />
       </geometry>
     </visual>
-  </link>
+  </link> -->
 
 </robot>

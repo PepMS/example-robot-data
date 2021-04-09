@@ -458,16 +458,16 @@ class FlyingArm3Loader(RobotLoader):
     free_flyer = False
 
 
-class TiltHexLoader(RobotLoader):
-    path = "tilt_hex_description"
-    urdf_filename = "tilt_hex.urdf"
+class HexTiltLoader(RobotLoader):
+    path = "hextilt_description"
+    urdf_filename = "hextilt.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
 
 
-class TiltHexFlyingArm5(RobotLoader):
-    path = "tilt_hex_description"
-    urdf_filename = "tilt_hex_flying_arm_5.urdf"
+class HexTiltFlyingArm5(RobotLoader):
+    path = "hextilt_description"
+    urdf_filename = "hextilt_flying_arm_5.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
 
@@ -504,6 +504,8 @@ ROBOTS = {
     'hexacopter370_flying_arm_3': Hexacopter370FlyingArm3Loader,
     'hexacopter370_flying_arm_5': Hexacopter370FlyingArm5Loader,
     'hexarotor_680_flying_arm_2': Hexarotor680FlyingArm2Loader,
+    'hextilt': HexTiltLoader,
+    'hextilt_flying_arm_5': HexTiltFlyingArm5,
     'hyq': HyQLoader,
     'icub': ICubLoader,
     'icub_reduced': ICubReducedLoader,
@@ -521,8 +523,6 @@ ROBOTS = {
     'talos_full_box': TalosFullBoxLoader,
     'tiago': TiagoLoader,
     'tiago_no_hand': TiagoNoHandLoader,
-    'tilt_hex': TiltHexLoader,
-    'tilt_hex_flying_arm_5': TiltHexFlyingArm5,
     'ur3': UR5Loader,
     'ur3_gripper': UR3GripperLoader,
     'ur3_limited': UR3LimitedLoader,
