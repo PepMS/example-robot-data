@@ -437,9 +437,9 @@ def loadIris():
     return IrisLoader().robot
 
 
-class Hexarotor680FlyingArm2Loader(RobotLoader):
-    path = "hexarotor_680_description"
-    urdf_filename = "hexarotor_680_flying_arm_2.urdf"
+class Hexacopter680FlyingArm2Loader(RobotLoader):
+    path = "hexacopter680_description"
+    urdf_filename = "hexacopter680_flying_arm_2.urdf"
     urdf_subpath = "urdf"
     free_flyer = True
 
@@ -503,7 +503,7 @@ ROBOTS = {
     'hexacopter370': Hexacopter370Loader,
     'hexacopter370_flying_arm_3': Hexacopter370FlyingArm3Loader,
     'hexacopter370_flying_arm_5': Hexacopter370FlyingArm5Loader,
-    'hexarotor_680_flying_arm_2': Hexarotor680FlyingArm2Loader,
+    'hexacopter680_flying_arm_2': Hexacopter680FlyingArm2Loader,
     'hextilt': HexTiltLoader,
     'hextilt_flying_arm_5': HexTiltFlyingArm5,
     'hyq': HyQLoader,
