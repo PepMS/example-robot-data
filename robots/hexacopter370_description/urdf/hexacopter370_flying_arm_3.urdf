@@ -182,6 +182,7 @@
     <parent link="hexacopter370__base_link" />
     <child link="flying_arm_3__base_link" />
   </joint>
+  
   <link name="flying_arm_3__base_link">
     <inertial>
       <origin rpy="0 0 0" xyz="5.4471E-05 0.00055544 0.0045971" />
