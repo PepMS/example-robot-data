@@ -17,7 +17,7 @@
         <mesh filename="package://example-robot-data/robots/hextilt_description/meshes/hextilt.dae" />
       </geometry>
       <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
+        <color rgba="0.8471 0.6078 0.3412 1" />
       </material>
     </visual>
     <collision>
@@ -40,7 +40,7 @@
         <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
       </geometry>
       <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
+        <color rgba="0.8471 0.6078 0.3412 1" />
       </material>
     </visual>
     <collision>
@@ -70,7 +70,7 @@
         <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/link_1.dae" />
       </geometry>
       <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
+        <color rgba="0.8314 0.8471 0.3412 1" />
       </material>
     </visual>
     <collision>
@@ -102,7 +102,7 @@
         <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/link_2.dae" />
       </geometry>
       <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
+        <color rgba="0.5804 0.8471 0.3412 1"/>
       </material>
     </visual>
     <collision>
@@ -134,7 +134,7 @@
         <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/link_3.dae" />
       </geometry>
       <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
+        <color rgba="0.3412 0.8471 0.3569 1"/>
       </material>
     </visual>
     <collision>
@@ -166,7 +166,7 @@
         <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/link_4.dae" />
       </geometry>
       <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
+        <color rgba="0.09020 0.54902 0.509804 1" />
       </material>
     </visual>
     <collision>
@@ -198,7 +198,7 @@
         <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/link_5.dae" />
       </geometry>
       <material name="">
-        <color rgba="0.75294 0.75294 0.75294 1" />
+        <color rgba="0.12549 0.37647 0.15686 1" />
       </material>
     </visual>
     <collision>
