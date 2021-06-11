@@ -1,5 +1,5 @@
 ℹ️ INFO ℹ️
-This fork contains some additional models: multicopters and aerial manipulators.
+This fork contains some additional models: multicopters and aerial manipulators. If you don't need them you can use its [parent repository](https://github.com/Gepetto/example-robot-data)
 
 # Example robot URDFs
 
