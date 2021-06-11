@@ -66,11 +66,11 @@ class RobotLoader(object):
 
         if self.srdf_filename:
             self.srdf_path = join(self.model_path, self.path, self.srdf_subpath, self.srdf_filename)
-            self.q0 = readParamsFromSrdf(self.robot.model, self.srdf_path, self.verbose, self.has_rotor_parameters,
-                                         self.ref_posture)
+            self.robot.q0 = readParamsFromSrdf(self.robot.model, self.srdf_path, self.verbose,
+                                               self.has_rotor_parameters, self.ref_posture)
         else:
             self.srdf_path = None
-            self.q0 = None
+            self.robot.q0 = pin.neutral(self.robot.model)
 
         if self.free_flyer:
             self.addFreeFlyerJointLimits()
@@ -82,6 +82,11 @@ class RobotLoader(object):
         lb = self.robot.model.lowerPositionLimit
         lb[:7] = -1
         self.robot.model.lowerPositionLimit = lb
+
+    @property
+    def q0(self):
+        warnings.warn("`q0` is deprecated. Please use `robot.q0`", FutureWarning, 2)
+        return self.robot.q0
 
 
 class ANYmalLoader(RobotLoader):
@@ -96,6 +101,12 @@ class ANYmalKinovaLoader(ANYmalLoader):
     urdf_filename = "anymal-kinova.urdf"
     srdf_filename = "anymal-kinova.srdf"
     ref_posture = "standing_with_arm_up"
+
+
+class BaxterLoader(RobotLoader):
+    path = "baxter_description"
+    urdf_filename = "baxter.urdf"
+    urdf_subpath = "urdf"
 
 
 def loadANYmal(withArm=None):
@@ -182,8 +193,8 @@ class TalosLegsLoader(TalosLoader):
         self.robot.visual_data = pin.GeometryData(g2)
 
         # Load SRDF file
-        self.q0 = readParamsFromSrdf(self.robot.model, self.srdf_path, self.verbose, self.has_rotor_parameters,
-                                     self.ref_posture)
+        self.robot.q0 = readParamsFromSrdf(self.robot.model, self.srdf_path, self.verbose, self.has_rotor_parameters,
+                                           self.ref_posture)
 
         assert (m2.armature[:6] == 0.).all()
         # Add the free-flyer joint limits to the new model
@@ -270,6 +281,10 @@ def loadKinova():
 class TiagoLoader(RobotLoader):
     path = "tiago_description"
     urdf_filename = "tiago.urdf"
+
+
+class TiagoDualLoader(TiagoLoader):
+    urdf_filename = "tiago_dual.urdf"
 
 
 class TiagoNoHandLoader(TiagoLoader):
@@ -426,6 +441,19 @@ def loadRomeo():
     return RomeoLoader().robot
 
 
+class SimpleHumanoidLoader(RobotLoader):
+    path = 'simple_humanoid_description'
+    urdf_subpath = 'urdf'
+    urdf_filename = 'simple_humanoid.urdf'
+    srdf_filename = 'simple_humanoid.srdf'
+    free_flyer = True
+
+
+class SimpleHumanoidClassicalLoader(SimpleHumanoidLoader):
+    urdf_filename = 'simple_humanoid_classical.urdf'
+    srdf_filename = 'simple_humanoid_classical.srdf'
+
+
 class IrisLoader(RobotLoader):
     path = "iris_description"
     urdf_filename = "iris.urdf"
@@ -501,6 +529,7 @@ class Hexacopter370FlyingArm5Loader(RobotLoader):
 ROBOTS = {
     'anymal': ANYmalLoader,
     'anymal_kinova': ANYmalKinovaLoader,
+    'baxter': BaxterLoader,
     'double_pendulum': DoublePendulumLoader,
     'flying_arm_5': FlyingArm5Loader,
     'flying_arm_3': FlyingArm3Loader,
@@ -519,6 +548,8 @@ ROBOTS = {
     'kinova': KinovaLoader,
     'panda': PandaLoader,
     'romeo': RomeoLoader,
+    'simple_humanoid': SimpleHumanoidLoader,
+    'simple_humanoid_classical': SimpleHumanoidClassicalLoader,
     'solo': SoloLoader,
     'solo12': Solo12Loader,
     'talos': TalosLoader,
@@ -528,6 +559,7 @@ ROBOTS = {
     'talos_full': TalosFullLoader,
     'talos_full_box': TalosFullBoxLoader,
     'tiago': TiagoLoader,
+    'tiago_dual': TiagoDualLoader,
     'tiago_no_hand': TiagoNoHandLoader,
     'ur3': UR5Loader,
     'ur3_gripper': UR3GripperLoader,
@@ -564,4 +596,4 @@ def load(name, display=False, rootNodeName=''):
 def load_full(name, display=False, rootNodeName=''):
     """Load a robot by its name, optionnaly display it in a viewer, and provide its q0 and paths."""
     inst = loader(name, display, rootNodeName)
-    return inst.robot, inst.q0, inst.urdf_path, inst.srdf_path
+    return inst.robot, inst.robot.q0, inst.urdf_path, inst.srdf_path
