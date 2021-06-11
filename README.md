@@ -1,3 +1,6 @@
+ℹ️ INFO ℹ️
+This fork contains some additional models: multicopters and aerial manipulators.
+
 # Example robot URDFs
 
 [![pipeline status](https://gitlab.laas.fr/gepetto/example-robot-data/badges/master/pipeline.svg)](https://gitlab.laas.fr/gepetto/example-robot-data/-/commits/master)
