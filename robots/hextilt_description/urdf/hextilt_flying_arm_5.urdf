@@ -37,7 +37,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/base_link.dae" />
       </geometry>
       <material name="">
         <color rgba="0.8471 0.6078 0.3412 1" />
@@ -46,7 +46,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/arm_baselink.dae" />
+        <mesh filename="package://example-robot-data/robots/flying_arm_5_description/meshes/base_link.dae" />
       </geometry>
     </collision>
   </link>
